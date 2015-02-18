@@ -10,7 +10,7 @@ namespace :wordpress do
   task :wp_config do
     on roles(:app) do
       within release_path do
-        wordpress_env = fetch(:wordpress_env, stage)
+        wordpress_env = fetch(:wordpress_env, fetch(:stage))
         execute :cp, "wp-config.php.#{wordpress_env}", 'wp-config.php'
       end
     end
