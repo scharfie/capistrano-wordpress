@@ -1,10 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'capistrano/wordpress/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "capistrano-wordpress"
-  spec.version       = '0.0.1'
+  spec.version       = Capistrano::Wordpress::VERSION
   spec.authors       = ["Chris Scharf"]
   spec.email         = ["scharfie@gmail.com"]
   spec.summary       = %q{Simple tasks for WP site deployment with capistrano}
